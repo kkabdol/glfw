@@ -20,7 +20,7 @@ project "glfw"
 
     filter "system:windows"
         cdialect "C11"
-        staticruntime "on"
+        staticruntime "off"
         systemversion "latest"
 
         files                       
