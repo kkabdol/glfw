@@ -1,8 +1,11 @@
 project "glfw"
     kind "StaticLib"
     language "C"
-
+    cdialect "C11"
+    staticruntime "on"
+        
     targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+    debugdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
     objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
     files
@@ -19,8 +22,6 @@ project "glfw"
     }
 
     filter "system:windows"
-        cdialect "C11"
-        staticruntime "off"
         systemversion "latest"
 
         files                       
